@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  height: 500px;
+  width: 200px;
+  background-color: pink;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.box2 {
+  /* height: 500px; */
+  width: 200px;
+  background-color: pink;
+  overflow: scroll;
+  position: relative;
+}
+.ullist {
+  position: absolute;
+  top: 0;
+}
+.list {
+  height: 20px;
+  background-color: orange;
+}

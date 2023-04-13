@@ -1,6 +1,9 @@
 import { useEffect, useState, useRef } from "react"
 import './style.css'
 const App = () => {
+  /**
+   * @description create a long data list
+   */
   const data = [...Array(100001).keys()]
   const ullist = useRef(null)
   const box2 = useRef(null)
@@ -9,11 +12,17 @@ const App = () => {
     box2.current.style.height = `${600}px`
 
   }, [])
+  /**
+   * @description init index
+   */
   const [index, setIndex] = useState({
     start: 0,
     end: 25
   })
 
+  /**
+   * @description scrollHandler
+   */
   const scrollHandler = () => {
     const top = ullist.current.scrollTop
     // console.log(top)
@@ -26,12 +35,12 @@ const App = () => {
     })
     // box2.current.style.height = `${600}px`
 
-    console.log(index)
   }
   return (
+
     <div className="box" ref={ullist} onScroll={scrollHandler}>
       <div className="box2" ref={box2} >
-
+        {/* use box2 to handle the height */}
       </div>
       <ul className="ullist"  >
         {
